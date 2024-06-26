@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+nav{
+    height: 60px;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+nav li{
+    height: 60px;
+}
+nav a{
+    height: 100%;
+    padding: 0 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff;
+}
+nav a:hover{
+    color: yellow;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.gamex a{
+    font-size: 25px;
+    text-transform: none;
+    color: yellow;
+}

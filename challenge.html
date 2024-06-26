@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHALLENGE</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/challenge.css">
+    <style> 
+    body{
+        width: 100%;
+        height: 100vh;
+        background-image: url(/images/fortnit.jpg);
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <ul>
+                <li class="gamex" ><a href="#"> Game X</a></li>
+                <li><a href="./index.html"> Home </a></li>
+                <li><a href="#"> Players </a></li>
+                <li><a href="/contact.html"> Conatct </a></li>
+                <li><a href="/login.html"> Login </a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h1> CHALLENING ME! </h1>
+            <br>
+            <form name="myForm" action="challenge.php" onsubmit="return form()" method="post">
+                <div class="form-group">
+                    <label for=""> First Name</label>
+                    <input type="text" id="fname" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for=""> Last Name</label>
+                    <input type="text" id="lname" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="email"> Email Address </label>
+                    <input type="email" id="gmail" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="password"> Password </label>
+                    <input type="password" id="pass" class="form-control" >
+                </div>
+                  
+                <div class="form-group">
+                    <label > Male </label>
+                    <input type="radio" name="gender" class="form-check-label" id="check">
+                    <label > Female </label>
+                    <input type="radio" name="gender" class="form-check-label" id="check">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Enter a phone number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="0300-1234567"pattern="[0-9]{4}-[0-9]{7}">
+                </div>
+                <div class="form-group">
+                    <label for="text"> In Which game you want to challenge?</label>
+                    <select id="Games">
+                        <option value="Valorant"> Valorant </option>
+                        <option value="Cs2"> Cs2 </option>
+                        <option value="Cod4"> Cod4 </option>
+                        <option value="R6 Siege"> Rainbow Six Siege </option>
+                        <option value="Rocket League"> Rocket League </option>
+                    </select>
+                </div>
+                <a href="/index.html"><button type="submit" class="btn btn-primary" value="submit">Submit</button></a>
+            </form>
+            </div>
+            
+        </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        function form() {
+       var x = document.forms["myForm"]["fname"].value;
+       var y = document.forms["myForm"]["lname"].value;
+       var z = document.forms["myForm"]["gmail"].value;
+       var a = document.forms["myForm"]["pass"].value;
+       var b = document.forms["myForm"]["check"].value;
+       var c = document.forms["myForm"]["phone"].value;
+      if (x == "") {
+       alert("Enter First Name");
+       return false;
+      }
+      else if( y== "" ){
+        alert("Enter Last name");
+      return false;
+      }
+      else if( z== "" ){
+        alert("Enter Gmail");
+      return false;
+      }
+      else if( a== "" ){
+        alert("Enter Password");
+      return false;
+      }
+      else if( b== "" ){
+        alert("Please select one");
+      return false;
+      }
+      else if( c== "" ){
+        alert("Please enter Phone number");
+      return false;
+      }
+      else {
+        alert('You have sucessfully Challenged Sufyan.');
+        window.location.href = "index.html";
+        return false; 
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/contact.css">
+    <style> 
+    body{
+        width: 100%;
+        height: 100vh;
+        background-image: url(/images/wras.jpg);
+        background-size: cover;
+        background-position: center;
+        color:gold;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <ul>
+                <li class="gamex" ><a href="#"> Game X</a></li>
+                <li><a href="./index.html"> Home </a></li>
+                <li><a href="#"> Players </a></li>
+                <li><a href="./contact.html"> Conatct </a></li>
+                <li><a href="/login.html"> Login </a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h1> Contact Us</h1>
+                <br>
+        <form name="myForm" action="contact.php" onsubmit="return form()" method="post">
+                <div class="form-group">
+                    <label for=""> First Name</label>
+                    <input type="text" id="fname" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for=""> Last Name</label>
+                    <input type="text" id="lname" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="email"> Email Address </label>
+                    <input type="email" id="gmail" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label> Country</label>
+                    <br>
+                    <input type="text" id="country" placeholder="Pakistan" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="text"> Message </label>
+                    <br>
+                   <textarea id="subject" name="subject" cols="80" rows="10"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+            </form>
+            </div>
+            
+        </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        function form() {
+       var x = document.forms["myForm"]["fname"].value;
+       var y = document.forms["myForm"]["lname"].value;
+       var z = document.forms["myForm"]["gmail"].value;
+       var a = document.forms["myForm"]["country"].value;
+       var b = document.forms["myForm"]["subject"].value;
+      if (x == "") {
+       alert("Enter First Name");
+       return false;
+      }
+      else if( y== "" ){
+        alert("Enter Last name");
+      return false;
+      }
+      else if( z== "" ){
+        alert("Enter Gmail");
+      return false;
+      }
+      else if( a== "" ){
+        alert("Enter Country");
+      return false;
+      }
+      else if( b== "" ){
+        alert("Add Message");
+      return false;
+      }
+      else {
+        alert('You have sucessfully send email.');
+        window.location.href = "index.html";
+        return false; 
+    }
+}
+    </script>
+</body>
+</html>
